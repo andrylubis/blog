@@ -1,2 +1,2 @@
 # blog
-blog with laravel
+Blog with Laravel 5.2
