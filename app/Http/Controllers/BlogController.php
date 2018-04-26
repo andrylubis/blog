@@ -9,8 +9,9 @@ use App\Post;
 
 class BlogController extends Controller
 {
+    protected $limit = 2;
     public function index() {
-      $posts =  Post::all();
+      $posts =  Post::with('author')->latestFirst()->simplePaginate($this->limit);
       return view('blog.index', compact('posts'));
     }
 }
