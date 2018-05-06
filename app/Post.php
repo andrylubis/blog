@@ -3,7 +3,6 @@
 namespace App;
 
 use Carbon\Carbon;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -37,12 +36,4 @@ class Post extends Model
   public function scopePublished($query) {
     return $query->where("published_at", "<=", Carbon::now());
   }
-
-
-
-
-
-
-
-
 }
